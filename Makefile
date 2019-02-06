@@ -38,8 +38,6 @@ ifneq "$(DRYRUN)" ""
 ROPTS += --dry-run
 endif
 
-FAKEROOT:= $(shell which fakeroot >/dev/null && echo fakeroot || true)
-TAR	= $(FAKEROOT) tar
 RSYNC	= rsync -crlptvHxP --inplace --exclude old $(ROPTS)
 
 ################################
